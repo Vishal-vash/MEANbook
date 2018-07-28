@@ -1,0 +1,30 @@
+{
+  "name": "meanbook",
+  "version": "1.0.0",
+  "description": "Mean App with Angular",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishal-vash/MEANbook.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Login",
+    "Angular",
+    "Post"
+  ],
+  "author": "Vishal Vasishat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishal-vash/MEANbook/issues"
+  },
+  "homepage": "https://github.com/Vishal-vash/MEANbook#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.5"
+  }
+}
