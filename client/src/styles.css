@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.form-control.ng-invalid.ng-dirty{
+    border-left: 4px solid rgb(252, 76, 76)
+}
+
+.form-control.ng-valid.ng-dirty{
+    border-left: 4px solid rgb(20, 150, 30)
+}

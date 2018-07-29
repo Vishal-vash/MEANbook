@@ -1,0 +1,59 @@
+<h3 class="page-header">Registeration Form</h3>
+
+<form [formGroup]="registerForm">
+  <div class="form-group">
+    <label for="eMail">Email</label>
+    <input type="eMail" class="form-control" id="eMail" placeholder="Enter email" autocomplete="true" formControlName="eMail">
+    <div class="alert alert-danger mt-2" *ngIf="registerForm.controls.eMail.errors && registerForm.controls.eMail.dirty">
+      <p class="mb-0" *ngIf="registerForm.controls.eMail.errors?.required">
+        eMail is required.
+      </p>
+      <p class="mb-0" *ngIf="registerForm.controls.eMail.errors?.minlength">
+        eMail must be 4 characters long.
+      </p>
+      <p class="mb-0" *ngIf="registerForm.controls.eMail.errors?.email">
+        Email is invalid.
+      </p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control border-error" id="username" placeholder="Enter Username" autocomplete="true" formControlName="username">
+    <div class="alert alert-danger mt-2" *ngIf="registerForm.controls.username.errors && registerForm.controls.username.dirty">
+      <p class="mb-0" *ngIf="registerForm.controls.username.errors?.required">
+        Username is required.
+      </p>
+      <p class="mb-0" *ngIf="registerForm.controls.username.errors?.minlength">
+        Username must be 4 characters long.
+      </p>
+      <p class="mb-0" *ngIf="registerForm.controls.username.errors?.validateUsername">
+        Username must not contain any special characters.
+      </p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" autocomplete="true">
+    <div class="alert alert-danger mt-2" *ngIf="registerForm.controls.password.errors && registerForm.controls.password.dirty">
+      <p class="mb-0" *ngIf="registerForm.controls.password.errors?.required">
+        Password is required.
+      </p>
+      <p class="mb-0" *ngIf="registerForm.controls.password.errors?.minlength">
+        Password must be 4 characters long.
+      </p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="confirm">Confirm Password</label>
+    <input type="password" class="form-control" id="confirm" placeholder="Confirm Password" formControlName="confirm" autocomplete="true">
+  </div>
+  <div class="alert alert-danger mt-2" *ngIf="(registerForm.errors || registerForm.controls.confirm.errors) && registerForm.controls.confirm.dirty">
+    <p class="mb-0" *ngIf="registerForm.controls.confirm.errors?.required">
+      Confirm Password is required.
+    </p>
+    <p class="mb-0" *ngIf="registerForm.errors?.matchingPasswords">
+      Passwords don't match.
+    </p>
+  </div>
+  <button type="button" class="btn btn-primary" [disabled]="!registerForm.valid" (click)="onRegisterSubmit()">Submit</button>
+</form>
