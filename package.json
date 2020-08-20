@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Vishal-vash/MEANbook#readme",
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "crypto": "^1.0.1",
